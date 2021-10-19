@@ -5,11 +5,11 @@ from django.shortcuts import render
 # Create your views here.
 def home_view(request, *args, **kwargs):  # *args, **kwargs
     print(args, kwargs)  # (<WSGIRequest: GET '/'>,) {}
-    return HttpResponse("<h1>Hello World</h1>")  # string of HTMl code
+    return render(request, "home.html", {})
 
 
 def contact_view(request, *args, **kwargs):
-    return HttpResponse("<h1>Contact</h1>")
+    return HttpResponse("<h1>Contact</h1>")  # string of HTMl code
 
 
 def about_view(request, *args, **kwargs):
